@@ -3,7 +3,6 @@ package com.ex1.assignment2m;
 
 import java.io.Serializable;
 import java.util.List;
-
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -55,8 +54,13 @@ public class Result implements Serializable
     private int voteCount;
     private final static long serialVersionUID = 1973198840455916591L;
 
+    /**
+     * No args constructor for use in serialization
+     *
+     */
     public Result() {
     }
+
     public Result(boolean adult, String backdropPath, List<Integer> genreIds, int id, String originalLanguage, String originalTitle, String overview, double popularity, String posterPath, String releaseDate, String title, boolean video, double voteAverage, int voteCount) {
         super();
         this.adult = adult;

@@ -36,6 +36,7 @@ public class DetailsResult extends AppCompatActivity {
         Request request = new Request.Builder().url(url).build();
         try (Response response = client.newCall(request).execute()) {
             return response.body().string();
+
         }
     }
 
@@ -111,7 +112,7 @@ public class DetailsResult extends AppCompatActivity {
 //            Result movie= movieList.get(position);
 
 
-            holder.castText.setText(castList.get(position).getName());
+//            holder.castText.setText(castList.get(position).getName());
 
             //use glide library to display the image
             Glide.with(DetailsResult.this)

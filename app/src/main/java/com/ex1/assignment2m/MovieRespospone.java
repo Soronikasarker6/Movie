@@ -25,10 +25,6 @@ public class MovieRespospone implements Serializable
     private int totalResults;
     private final static long serialVersionUID = -5338436645932395578L;
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
     public MovieRespospone() {
     }
 
