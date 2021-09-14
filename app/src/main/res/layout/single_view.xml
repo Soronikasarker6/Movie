@@ -1,36 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_margin="2dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:elevation="1dp"
-        app:cardCornerRadius="4dp">
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:id="@+id/castPic"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:layout_centerHorizontal="true"
-                android:src="@mipmap/sidharth"/>
-            <TextView
-                android:id="@+id/castName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="name"
-                android:layout_below="@+id/castPic"
-                android:layout_centerHorizontal="true"
-                android:layout_marginBottom="5sp"
-                android:autoSizeTextType="uniform"
-                android:autoSizeMinTextSize="8sp"
-                android:autoSizeMaxTextSize="15sp" />
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="110dp"
+    android:layout_height="160dp"
+    android:layout_margin="5dp">
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="110dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/castPic"
+            android:layout_width="110dp"
+            android:layout_height="160dp"
+            android:minHeight="160dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/castName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/castPic"
+            android:background="#60000000"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="6dp"
+            android:textStyle="bold"
+            android:text="Cast Name"
+            android:textColor="#FFFFFF"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:layout_margin="2dp"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto">-->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:elevation="1dp"-->
+<!--        app:cardCornerRadius="4dp">-->
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <ImageView-->
+<!--                android:id="@+id/castPic"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:src="@mipmap/sidharth"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/castName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="name"-->
+<!--                android:layout_below="@+id/castPic"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginBottom="5sp"-->
+<!--                android:autoSizeTextType="uniform"-->
+<!--                android:autoSizeMinTextSize="8sp"-->
+<!--                android:autoSizeMaxTextSize="15sp" />-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.cardview.widget.CardView>-->
+
+<!--</RelativeLayout>-->

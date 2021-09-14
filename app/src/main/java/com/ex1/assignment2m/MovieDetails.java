@@ -88,41 +88,9 @@ public class MovieDetails implements Serializable
     private int voteCount;
     private final static long serialVersionUID = -8994661317418032702L;
 
-    /**
-     * No args constructor for use in serialization
-     * 
-     */
     public MovieDetails() {
     }
 
-    /**
-     * 
-     * @param imdbId
-     * @param video
-     * @param title
-     * @param productionCountries
-     * @param revenue
-     * @param genres
-     * @param popularity
-     * @param id
-     * @param budget
-     * @param posterPath
-     * @param overview
-     * @param voteAverage
-     * @param releaseDate
-     * @param belongsToCollection
-     * @param runtime
-     * @param originalLanguage
-     * @param originalTitle
-     * @param tagline
-     * @param spokenLanguages
-     * @param backdropPath
-     * @param voteCount
-     * @param adult
-     * @param productionCompanies
-     * @param homepage
-     * @param status
-     */
     public MovieDetails(boolean adult, String backdropPath, BelongsToCollection belongsToCollection, int budget, List<Genre> genres, String homepage, int id, String imdbId, String originalLanguage, String originalTitle, String overview, double popularity, String posterPath, List<ProductionCompany> productionCompanies, List<ProductionCountry> productionCountries, String releaseDate, int revenue, int runtime, List<SpokenLanguage> spokenLanguages, String status, String tagline, String title, boolean video, double voteAverage, int voteCount) {
         super();
         this.adult = adult;

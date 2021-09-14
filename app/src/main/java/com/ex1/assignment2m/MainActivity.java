@@ -67,7 +67,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         MovieRespospone mr = new Gson().fromJson(response, MovieRespospone.class);
-
         RecyclerView countryRecyclerView = findViewById(R.id.my_list);
         countryRecyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         countryRecyclerView.setAdapter(new MyAdapter(mr.getResults()));
@@ -118,29 +117,22 @@ public class MainActivity extends AppCompatActivity {
 
 
         @Override
-        public int getItemCount() {
-            return movieList.size();
-        }
+        public int getItemCount() { return movieList.size(); }
     }
-
     public static class MyViewHolder extends RecyclerView.ViewHolder{
         TextView name, rating;
         ImageView flag;View cardView;
-        ImageView castImg;
-        TextView castText;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.title);
             rating = itemView.findViewById(R.id.rating);
             flag = itemView.findViewById(R.id.poster);
-            // cardView= itemView.findViewById(R.id.cardview);
+
             cardView = itemView;
-            castImg = itemView.findViewById(R.id.castPic);
-            castText =itemView.findViewById(R.id.castName);
 
 
         }
     }
-
 }
